@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Spanish Learning Club - Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_print.css" media="print">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <style media="screen">
+
+        * {
+          box-sizing: border-box;
+        }
+
+        img {
+          margin: 1em;
+          box-shadow: 10px 10px #777;
+        }
+
+        #gallery {
+          position: relative;
+        }
+
+        #gallery ul {
+          width: 300px;
+          list-style-type: none;
+        }
+
+        #gallery li {
+            display: inline; float: left; padding: 10px; }
+
+        #gallery p img { border-style: none;
+                          width: 480px;
+                          height: auto;
+         }
+
+         #gallery p textarea {
+           width: 480px;
+           margin: 1em;
+
+         }
+
+        #gallery a { text-decoration: none; color: #333; font-style: italic; }
+
+        #gallery span { display: none; }
+
+        #gallery a:hover span { display: block; position: absolute; top: 10px; left: 300px; text-align: center; }
+
+        #someid {
+          background-color: #D3D3D3;
+          position: fixed;
+          font-weight: bold;
+          padding: 10px;
+        }
+
+        .anotherid {
+          position: relative;
+          display: 15px left;
+          background-color: #d3d3d3;
+        }
+
+      </style>
+  </head>
+  <body>
+  <div id="container">
+    <header>
+      <h1>Spanish Learning Club</h1>
+    </header>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a>&nbsp;</li>
+          <li><a href="courses.html">Courses</a>&nbsp;</li>
+          <li><a href="resources.html">Resources</a>&nbsp;</li>
+          <li><a href="contact.html">Contact</a>&nbsp;</li>
+          <li><a href="about.html">About</a>&nbsp;</li>
+        </ul>
+    </nav>
+    <hr>
+    <main>
+      <ul>
+        <li>  <p><h2>Write down sentence exercices</h2> </p></li>
+
+      </ul>
+      <div class="gallery" id="gallery">
+          <p><img src="img/Frace1.png" alt="Red Crested Cardinal" width="200" height="150">
+              <p><textarea name="name" rows="8" cols="80" placeholder="transcript image sentence"></textarea></p>
+          </p>
+
+          <p><img src="img/Frace2.png" alt="Rose-Breasted Grosbeak" width="200" height="150">
+              <p><textarea name="name" rows="8" cols="80" placeholder="transcript image sentence"></textarea></p>
+          </p>
+
+          <p><img src="img/Frace3.png" alt="Gyrfalcon" width="200" height="150">
+              <p><textarea name="name" rows="8" cols="80" placeholder="transcript image sentence"></textarea></p>
+          </p>
+
+          <p><img src="img/Frace4.png" alt="Rock Wren" width="200" height="150">
+              <p><textarea name="name" rows="8" cols="80" placeholder="transcript image sentence"></textarea></p>
+          </p>
+
+          <p><img src="img/Frace5.png" alt="Coopers Hawk" width="200" height="150">
+              <p><textarea name="name" rows="8" cols="80" placeholder="transcript image sentence"></textarea></p>
+          </p>
+
+          <p><img src="img/Frace6.png" alt="Immature Bald Eagle" width="200" height="150">
+              <p><textarea name="name" rows="8" cols="80" placeholder="transcript image sentence"></textarea></p>
+          </p>
+      </div>
+    </main>
+    <footer>
+    Copyright &copy; 2020 Spanish Learning Club
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<meta http-equiv="Content-type" content="text/html;charset=iso8859-1" /> <table border =1><thead><tr><th align="left">CENTRO DE COSTO: </th><th align="left">RECDEI001</th></tr><tr><th align="left">ITEM PRESUPUESTARIO: </th><th align="left">030601023614</th></tr><tr><th align="left">PROYECTO: </th><th align="left">LIITEC_ULS</th></tr></thead></table><br><table border =1><thead><tr><th align="center" colspan=7>Reporte de pagos Contratas</th></tr></thead></table><br> <table border = 1 id="tabla_contenedora_reporte_contrata" name="tabla_contenedora_reporte_contrata" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+           <th>Rut</th>
+           <th>Nombre</th>
+           <th>Nro Contrato</th>
+           <th>Resolucion</th>
+           <th>Descripción</th>
+           <th>Fecha liquidación</th>
+           <th>Asiento</th>
+           <th>Total</th>
+        </tr>
+    </thead>
+    <tbody id="tabla_contenedora_reporte_contrata_tbody" class="table table-striped table-bordered">
+
+    SELECT unique
+                    a.nro_resolucion, c.rut,c.dv, a.rol_emp, c.nombre, a.nro_contrato, a.fecha_liquidacion,a.tipo_mov,
+                    a.codigo, b.descripcion, a.total_hd, a.centro_costo, a.tarea, ce.ASIENTO
+                FROM 
+                    rem_liquidacion A, rem_def_hab_des b, rem_ficha c, CG_EASIENTO ce 
+                WHERE       
+                        a.centro_costo = 'RECDEI001'
+                    AND a.TAREA = '030601023614'  
+                    AND TO_CHAR(a.FECHA_LIQUIDACION,'RRRR') = '2019'
+                    AND TO_NUMBER(TO_CHAR(a.FECHA_LIQUIDACION,'MM')) <= '12' 
+            
+                    AND a.tipo_mov = b.tipo_mov 
+                    AND a.codigo = b.codigo 
+                    AND a.rol_emp = c.rol_emp 
+                    AND ce.ANO = TO_CHAR(a.FECHA_LIQUIDACION,'RRRR') 
+                    AND ce.mes = TO_CHAR(a.FECHA_LIQUIDACION,'MM')
+                    AND ce.descripcion like 'ASIENTO DE REMUNERACIONES%'
+                    AND ce.EMPRESA ='LS'
+                ORDER BY a.FECHA_LIQUIDACION ,a.tarea,a.codigo	
+
+            <tr><td>10623142-7</td><td>NUÑEZ VALDES JIMENA YUDIS</td><td>RTR006/19</td><td>RTR006/19</td><td>SUELDO BASE</td><td>27-09-2019</td><td>156361</td><td>$813.382</td></tr><tr><td>10623142-7</td><td>NUÑEZ VALDES JIMENA YUDIS</td><td>RTR006/19</td><td>RTR006/19</td><td>ASIG. UNIVERSITARIA 1%</td><td>27-09-2019</td><td>156361</td><td>$8.134</td></tr><tr><td>10953596-6</td><td>LOPEZ CORTES FRANCISCO JAVIER</td><td>RET467/19</td><td>RE030/19</td><td>ASIG. TRANSITORIA ACADEM..</td><td>27-09-2019</td><td>156361</td><td>$400.000</td></tr><tr><td>10623142-7</td><td>NUÑEZ VALDES JIMENA YUDIS</td><td>RTR006/19</td><td>RTR006/19</td><td>SUELDO BASE</td><td>29-10-2019</td><td>161616</td><td>$813.382</td></tr><tr><td>10623142-7</td><td>NUÑEZ VALDES JIMENA YUDIS</td><td>RTR006/19</td><td>RTR006/19</td><td>ASIG. UNIVERSITARIA 1%</td><td>29-10-2019</td><td>161616</td><td>$8.134</td></tr><tr><td>10953596-6</td><td>LOPEZ CORTES FRANCISCO JAVIER</td><td>RET467/19</td><td>RE030/19</td><td>ASIG. TRANSITORIA ACADEM..</td><td>29-10-2019</td><td>161616</td><td>$400.000</td></tr><tr><td>10623142-7</td><td>NUÑEZ VALDES JIMENA YUDIS</td><td>RTR006/19</td><td>RTR006/19</td><td>SUELDO BASE</td><td>28-11-2019</td><td>172657</td><td>$813.382</td></tr><tr><td>10623142-7</td><td>NUÑEZ VALDES JIMENA YUDIS</td><td>RTR006/19</td><td>RTR006/19</td><td>ASIG. UNIVERSITARIA 1%</td><td>28-11-2019</td><td>172657</td><td>$8.134</td></tr><tr><td>10953596-6</td><td>LOPEZ CORTES FRANCISCO JAVIER</td><td>RET467/19</td><td>RE030/19</td><td>ASIG. TRANSITORIA ACADEM..</td><td>28-11-2019</td><td>172657</td><td>$400.000</td></tr>        
+    </tbody>
+</table>
+
+        
