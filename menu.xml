@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MENU>
+    <TITLE>XYZ Menu</TITLE>
+    <SOUP_OF_DAY>
+        <SUB_TITLE>Soup of the Day</SUB_TITLE>
+        <SOUP>
+            Potato Leek Soup
+        </SOUP>
+    </SOUP_OF_DAY>
+    <SANDWICHES>
+        <SANDWICH>Ham and Cheese</SANDWICH>
+        <SANDWICH>Tuna Salad</SANDWICH>
+        <SANDWICH>Veggie Special</SANDWICH>
+    </SANDWICHES>
+    <SANDWICHES>
+        <SANDWICH>French Fries</SANDWICH>
+        <SANDWICH>Cole Slaw</SANDWICH>
+        <SANDWICH>Fruit Cup</SANDWICH>
+    </SANDWICHES>
+</MENU>
